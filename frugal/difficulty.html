@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Difficulty</title>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+
+</head>
+<body class="bg-dark">
+
+<div class="container">
+
+  <h1 class="title">Select Difficulty</h1>
+  <p class="subtitle">Choose the challenge level for your quiz</p>
+
+  <div class="difficulty-grid">
+
+    <div class="difficulty-card easy" onclick="startQuiz('easy')">
+      <span class="diff-icon">🟢</span>
+      <h3>Easy</h3>
+      <p>Basic concepts, warm-up questions</p>
+      <span class="meta">30 sec / question</span>
+    </div>
+
+    <div class="difficulty-card medium" onclick="startQuiz('medium')">
+      <span class="diff-icon">🟡</span>
+      <h3>Medium</h3>
+      <p>Moderate difficulty, applied thinking</p>
+      <span class="meta">30 sec / question</span>
+    </div>
+
+    <div class="difficulty-card hard" onclick="startQuiz('hard')">
+      <span class="diff-icon">🔴</span>
+      <h3>Hard</h3>
+      <p>Advanced concepts, tricky scenarios</p>
+      <span class="meta">30 sec / question</span>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const category = params.get("cat");
+
+function startQuiz(diff) {
+  window.location.href = `quiz.html?cat=${category}&diff=${diff}`;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Category</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark">
+
+<div class="container">
+
+  <h1 class="title">Dynamic Quiz Application</h1>
+  <p class="subtitle">Choose a Category to Begin</p>
+
+  <div class="category-grid">
+
+    <div class="category-card" onclick="goToDifficulty('programming')">
+      <span class="icon">💻</span>
+      <h3>Programming</h3>
+      <p>Core coding & concepts</p>
+    </div>
+
+    <div class="category-card" onclick="goToDifficulty('cn')">
+      <span class="icon">🌐</span>
+      <h3>Computer Networks</h3>
+      <p>Protocols, OSI, routing</p>
+    </div>
+
+    <div class="category-card" onclick="goToDifficulty('dbms')">
+      <span class="icon">🗄️</span>
+      <h3>DBMS</h3>
+      <p>SQL, normalization</p>
+    </div>
+
+    <div class="category-card" onclick="goToDifficulty('os')">
+      <span class="icon">⚙️</span>
+      <h3>Operating Systems</h3>
+      <p>Processes, memory</p>
+    </div>
+
+    <div class="category-card" onclick="goToDifficulty('math')">
+      <span class="icon">📐</span>
+      <h3>Mathematics</h3>
+      <p>Probability & algebra</p>
+    </div>
+
+    <div class="category-card" onclick="goToDifficulty('sports')">
+      <span class="icon">🏆</span>
+      <h3>Sports</h3>
+      <p>Rules & records</p>
+    </div>
+
+    <div class="category-card" onclick="goToDifficulty('general')">
+      <span class="icon">🌍</span>
+      <h3>General Knowledge</h3>
+      <p>India & world</p>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function goToDifficulty(category) {
+  window.location.href = `difficulty.html?cat=${category}`;
+}
+</script>
+
+</body>
+</html>

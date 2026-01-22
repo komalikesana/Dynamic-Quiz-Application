@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz Results</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="result-bg">
+
+<div class="result-container">
+
+  <h1 class="result-title">Quiz Result Summary</h1>
+
+  <!-- SCORE SUMMARY -->
+  <div class="score-cards">
+    <div class="score-card correct">
+      <h3>Correct</h3>
+      <p id="correct"></p>
+    </div>
+    <div class="score-card wrong">
+      <h3>Incorrect</h3>
+      <p id="wrong"></p>
+    </div>
+    <div class="score-card total">
+      <h3>Total</h3>
+      <p id="score"></p>
+    </div>
+    <div class="score-card accuracy">
+      <h3>Accuracy</h3>
+      <p id="accuracy"></p>
+    </div>
+  </div>
+
+  <!-- TIME ANALYSIS -->
+  <div class="chart-card">
+    <h3>Time Spent Per Question (seconds)</h3>
+    <canvas id="timeChart"></canvas>
+  </div>
+
+  <!-- REVIEW ANSWERS -->
+  <div class="review-card">
+    <h2>Answer Review</h2>
+    <div id="reviewList"></div>
+  </div>
+
+  <button class="restart-btn" onclick="restartQuiz()">Take Another Quiz</button>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const score = Number(localStorage.getItem("score"));
+const total = Number(localStorage.getItem("total"));
+const timeSpent = JSON.parse(localStorage.getItem("timeSpent"));
+const userAnswers = JSON.parse(localStorage.getItem("answers"));
+const questions = JSON.parse(localStorage.getItem("questions"));
+
+const correct = score;
+const wrong = total - score;
+const accuracy = ((correct / total) * 100).toFixed(2);
+
+document.getElementById("correct").innerText = correct;
+document.getElementById("wrong").innerText = wrong;
+document.getElementById("score").innerText = `${correct} / ${total}`;
+document.getElementById("accuracy").innerText = accuracy + "%";
+
+/* CHART */
+new Chart(document.getElementById("timeChart"), {
+  type: "bar",
+  data: {
+    labels: timeSpent.map((_, i) => `Q${i + 1}`),
+    datasets: [{
+      label: "Time (sec)",
+      data: timeSpent,
+      backgroundColor: "#42a5f5"
+    }]
+  },
+  options: {
+    scales: { y: { beginAtZero: true } }
+  }
+});
+
+/* REVIEW ANSWERS */
+const reviewList = document.getElementById("reviewList");
+
+questions.forEach((q, i) => {
+  const userAns = userAnswers[i];
+  const isCorrect = userAns === q.answer;
+
+  const div = document.createElement("div");
+  div.className = "review-item " + (isCorrect ? "correct" : "wrong");
+
+  div.innerHTML = `
+    <p class="review-question"><strong>Q${i + 1}:</strong> ${q.q}</p>
+    <p>Your Answer: <span>${userAns ?? "Not Answered"}</span></p>
+    <p>Correct Answer: <strong>${q.answer}</strong></p>
+  `;
+
+  reviewList.appendChild(div);
+});
+
+function restartQuiz() {
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+Jan 22, 2026 10:47:31 PM QuizTest setup
+INFO: ==== TEST EXECUTION STARTED ====
+Jan 22, 2026 10:47:33 PM QuizTest openLandingPage
+INFO: Opening Landing Page (Category Selection)
+Jan 22, 2026 10:47:34 PM QuizTest openLandingPage
+INFO: Page Loaded | URL: http://localhost/frugal/index.html
+Jan 22, 2026 10:47:34 PM QuizTest openLandingPage
+INFO: Page Title: Select Category
+Jan 22, 2026 10:47:35 PM QuizTest takeScreenshot
+INFO: Screenshot captured: 01_Landing_Category
+Jan 22, 2026 10:47:35 PM QuizTest selectCategory
+INFO: Selecting Category
+Jan 22, 2026 10:47:35 PM QuizTest selectCategory
+INFO: Category Selected | URL: http://localhost/frugal/difficulty.html?cat=programming
+Jan 22, 2026 10:47:35 PM QuizTest takeScreenshot
+INFO: Screenshot captured: 02_Category_Selected
+Jan 22, 2026 10:47:35 PM QuizTest selectDifficulty
+INFO: Selecting Difficulty
+Jan 22, 2026 10:47:36 PM QuizTest selectDifficulty
+INFO: Difficulty Selected | Quiz Started
+Jan 22, 2026 10:47:36 PM QuizTest takeScreenshot
+INFO: Screenshot captured: 03_Difficulty_Selected
+Jan 22, 2026 10:47:36 PM QuizTest answerSingleQuestion
+INFO: Question 1: Which data type stores true/false?
+Jan 22, 2026 10:47:36 PM QuizTest answerSingleQuestion
+INFO: Selected first option
+Jan 22, 2026 10:47:37 PM QuizTest takeScreenshot
+INFO: Screenshot captured: Q1
+Jan 22, 2026 10:47:37 PM QuizTest answerSingleQuestion
+INFO: Question 2: Which is not programming language?
+Jan 22, 2026 10:47:37 PM QuizTest answerSingleQuestion
+INFO: Selected first option
+Jan 22, 2026 10:47:38 PM QuizTest takeScreenshot
+INFO: Screenshot captured: Q2
+Jan 22, 2026 10:47:38 PM QuizTest answerSingleQuestion
+INFO: Question 3: Which is OS?
+Jan 22, 2026 10:47:38 PM QuizTest answerSingleQuestion
+INFO: Selected first option
+Jan 22, 2026 10:47:38 PM QuizTest takeScreenshot
+INFO: Screenshot captured: Q3
+Jan 22, 2026 10:47:39 PM QuizTest answerSingleQuestion
+INFO: Question 4: Which is framework?
+Jan 22, 2026 10:47:39 PM QuizTest answerSingleQuestion
+INFO: Selected first option
+Jan 22, 2026 10:47:39 PM QuizTest takeScreenshot
+INFO: Screenshot captured: Q4
+Jan 22, 2026 10:47:39 PM QuizTest answerSingleQuestion
+INFO: Question 5: Which company developed Java?
+Jan 22, 2026 10:47:40 PM QuizTest answerSingleQuestion
+INFO: Selected first option
+Jan 22, 2026 10:47:40 PM QuizTest takeScreenshot
+INFO: Screenshot captured: Q5
+Jan 22, 2026 10:47:40 PM QuizTest answerSingleQuestion
+INFO: Question 6: Which is version control?
+Jan 22, 2026 10:47:40 PM QuizTest answerSingleQuestion
+INFO: Selected first option
+Jan 22, 2026 10:47:40 PM QuizTest takeScreenshot
+INFO: Screenshot captured: Q6
+Jan 22, 2026 10:47:41 PM QuizTest answerSingleQuestion
+INFO: Question 7: Which is database?
+Jan 22, 2026 10:47:41 PM QuizTest answerSingleQuestion
+INFO: Selected first option
+Jan 22, 2026 10:47:41 PM QuizTest takeScreenshot
+INFO: Screenshot captured: Q7
+Jan 22, 2026 10:47:42 PM QuizTest answerSingleQuestion
+INFO: Question 8: JS file extension?
+Jan 22, 2026 10:47:42 PM QuizTest answerSingleQuestion
+INFO: Selected first option
+Jan 22, 2026 10:47:42 PM QuizTest takeScreenshot
+INFO: Screenshot captured: Q8
+Jan 22, 2026 10:47:42 PM QuizTest answerSingleQuestion
+INFO: Question 9: Which is frontend?
+Jan 22, 2026 10:47:42 PM QuizTest answerSingleQuestion
+INFO: Selected first option
+Jan 22, 2026 10:47:43 PM QuizTest takeScreenshot
+INFO: Screenshot captured: Q9
+Jan 22, 2026 10:47:43 PM QuizTest answerSingleQuestion
+INFO: Question 10: Which is scripting language?
+Jan 22, 2026 10:47:43 PM QuizTest answerSingleQuestion
+INFO: Selected first option
+Jan 22, 2026 10:47:44 PM QuizTest takeScreenshot
+INFO: Screenshot captured: Q10
+Jan 22, 2026 10:47:44 PM QuizTest verifyResultPage
+INFO: Verifying Result Page
+Jan 22, 2026 10:47:44 PM QuizTest verifyResultPage
+INFO: Result Page Displayed | Score Verified
+Jan 22, 2026 10:47:45 PM QuizTest takeScreenshot
+INFO: Screenshot captured: Final_Result
+Jan 22, 2026 10:47:45 PM QuizTest tearDown
+INFO: ==== TEST EXECUTION FINISHED ====
